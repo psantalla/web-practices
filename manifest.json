@@ -1,0 +1,49 @@
+{
+    "manifest_version": 3,
+    "name": "Web Practices",
+    "version": "0.0.1",
+    "description": "An extension to promote the best web practices.",
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "unlimitedStorage"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "images/icon16.png",
+            "48": "images/icon48.png",
+            "128": "images/icon128.png"
+        }
+    },
+    "icons": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+    },
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "images/*",
+                "style/extension.css",
+                "script/extension.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ]
+}
